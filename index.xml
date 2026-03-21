@@ -1,20 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="Wretcher Scripts">
+<index version="1" name="Dead Pixel Design Repository">
   <category name="MIDI Generators">
-    <reapack name="wretcher-midi-generator.lua" type="script" desc="Wretcher Drum Engine">
+    <reapack name="wretcher-midi-generator.lua" type="script" desc="Dead Pixel Drum Apparatus">
       <metadata>
-        <description><![CDATA[Generates heavy-music drum MIDI patterns in REAPER.
-
-Covers blast beats, djent, thall, death metal, black metal, grindcore, metalcore, doom, sludge, progressive metal, and thrash. Includes 4 MIDI map presets with an in-script editor, power hand control, configurable time signatures (4/4, 3/4, 7/8, 5/4), humanize/push-pull timing, and auto tom fills.
+        <description><![CDATA[Generates heavy-music drum MIDI patterns in REAPER. Comes with 43 grooves across 12 genre categories ready to go. Covers blast beats, djent, thall, death metal, black metal, grindcore, metalcore, doom, sludge, progressive metal, thrash, and breakdowns. Includes 4 MIDI map presets with an in-script editor, power hand control, configurable time signatures (4/4, 3/4, 7/8, 5/4), humanize/push-pull timing, and auto tom fills.
 
 Requirements: REAPER 6.0+, ReaImGui 0.8+]]></description>
-        <link rel="website">https://github.com/wretcher207/wretcher-midi-generator</link>
+        <link rel="website">https://www.deadpixeldesign.com</link>
       </metadata>
-      <version name="1.0.0" author="Wretcher" time="2026-03-20T00:00:00Z">
+      <version name="1.0.0" author="Dead Pixel Design" time="2026-03-20T00:00:00Z">
         <changelog><![CDATA[Initial release.]]></changelog>
+        <source>https://raw.githubusercontent.com/wretcher207/wretcher-midi-generator/main/wretcher-midi-generator.lua</source>
       </version>
-      <version name="1.0.1" author="Wretcher" time="2026-03-20T00:00:00Z">
+      <version name="1.0.1" author="Dead Pixel Design" time="2026-03-20T00:00:00Z">
         <changelog><![CDATA[Fix crash on close when ReaImGui_DestroyContext is unavailable in older ReaImGui versions.]]></changelog>
+        <source>https://raw.githubusercontent.com/wretcher207/wretcher-midi-generator/main/wretcher-midi-generator.lua</source>
+      </version>
+      <version name="1.1.0" author="Dead Pixel Design" time="2026-03-21T00:00:00Z">
+        <changelog><![CDATA[Rebrand to Dead Pixel Drum Apparatus. Authorship and metadata updated. No functional changes.]]></changelog>
         <source>https://raw.githubusercontent.com/wretcher207/wretcher-midi-generator/main/wretcher-midi-generator.lua</source>
       </version>
     </reapack>

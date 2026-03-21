@@ -1,10 +1,23 @@
--- WRETCHER DRUM ENGINE v51
+-- @description Dead Pixel Drum Apparatus
+-- @author David W. Russell III / Dead Pixel Design
+-- @version 1.1.0
+-- @changelog
+--   Rebrand to Dead Pixel Drum Apparatus. Authorship and metadata updated. No functional changes.
+-- @website https://www.deadpixeldesign.com
+-- @about
+--   Generates heavy-music drum MIDI patterns directly in REAPER. Comes with 43 grooves across 12
+--   genre categories ready to go. Covers blast beats, djent, thall, death metal, black metal,
+--   grindcore, metalcore, doom, sludge, progressive metal, thrash, and breakdowns. Includes 4
+--   MIDI map presets with an in-script editor, power hand control, configurable time signatures,
+--   humanize/push-pull timing, and auto tom fills. Requires REAPER 6.0+ and ReaImGui 0.8+.
+
+-- DEAD PIXEL DRUM APPARATUS v1.1.0
 -- THE COMPLETE BERKLEE EDITION
 if not reaper.ImGui_CreateContext then
-    reaper.ShowMessageBox("This script requires the ReaImGui extension.\nInstall it via ReaPack: Extensions > ReaImGui.", "Wretcher Drum Engine", 0)
+    reaper.ShowMessageBox("This script requires the ReaImGui extension.\nInstall it via ReaPack: Extensions > ReaImGui.", "Dead Pixel Drum Apparatus", 0)
     return
 end
-local ctx = reaper.ImGui_CreateContext('Wretcher Drum Engine v51')
+local ctx = reaper.ImGui_CreateContext('Dead Pixel Drum Apparatus v1.1.0')
 reaper.atexit(function()
     if reaper.ImGui_DestroyContext then reaper.ImGui_DestroyContext(ctx) end
 end)
@@ -281,7 +294,7 @@ end
 local function GenerateMIDI()
     local track = reaper.GetSelectedTrack(0, 0)
     if not track then
-        reaper.ShowMessageBox("Select a track first.", "Wretcher Engine", 0)
+        reaper.ShowMessageBox("Select a track first.", "Dead Pixel Drum Apparatus", 0)
         return
     end
 
@@ -300,8 +313,8 @@ local function GenerateMIDI()
         reaper.TimeMap2_QNToTime(0, start_qn + (bar_length_qn * num_bars) + 0.25), false)
     local take = reaper.GetActiveTake(item)
     if not take then
-        reaper.Undo_EndBlock("Wretcher Drum Gen", -1)
-        reaper.ShowMessageBox("Failed to create MIDI take.", "Wretcher Engine", 0)
+        reaper.Undo_EndBlock("Dead Pixel Drum Gen", -1)
+        reaper.ShowMessageBox("Failed to create MIDI take.", "Dead Pixel Drum Apparatus", 0)
         return
     end
     local subdiv = subdivision_options[current_subdiv_idx]
@@ -395,7 +408,7 @@ local function GenerateMIDI()
 
     reaper.MIDI_Sort(take)
     reaper.UpdateArrange()
-    reaper.Undo_EndBlock("Wretcher Drum Gen", -1)
+    reaper.Undo_EndBlock("Dead Pixel Drum Gen", -1)
 end
 
 local function GetRandomGroove()
@@ -410,7 +423,7 @@ end
 -- =============================================
 local function loop()
     reaper.ImGui_SetNextWindowSize(ctx, 440, 800, reaper.ImGui_Cond_FirstUseEver())
-    local v, open = reaper.ImGui_Begin(ctx, 'Wretcher Drum Engine v51', true)
+    local v, open = reaper.ImGui_Begin(ctx, 'Dead Pixel Drum Apparatus v1.1.0', true)
     if v then
 
         if reaper.ImGui_CollapsingHeader(ctx, "Map Editor (" .. MIDI_MAPS[current_map_idx].name .. ")") then

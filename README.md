@@ -1,53 +1,50 @@
-# Wretcher Drum Engine
+> **ReaPack users:** This script is now distributed through the unified Dead Pixel Design repository.
+> Add this URL in REAPER under `Extensions → ReaPack → Import repositories`:
+> ```
+> https://raw.githubusercontent.com/wretcher207/dead-pixel-design/main/index.xml
+> ```
+> The `index.xml` in this repo is preserved for backward compatibility but will not receive new entries.
 
-A REAPER ReaScript that generates heavy-music drum MIDI patterns directly into your project. Covers blast beats, djent grooves, thall, death metal, black metal, grindcore, metalcore, doom, sludge, progressive metal, thrash, and more.
+---
 
-## Features
+# Dead Pixel Drum Apparatus
 
-- 12 genre categories with 40+ named grooves
-- 4 MIDI map presets (Odeholm, RS Monarch, Ultimate Heavy Drums, Sleep Token II by MixWave) with an in-script map editor
-- Power hand control: hi-hat closed/open, ride tip/bell, crash, china, stack
-- Configurable time signatures: 4/4, 3/4, 7/8, 5/4
-- Loop lengths: 1, 2, 4, or 8 bars
-- Velocity humanization and push/pull timing
-- Auto-insert tom fill with crash at the end of the loop
-- Randomize button for instant inspiration
+A REAPER script that generates drum MIDI for heavy music. You pick a groove, set a time signature, and it writes the MIDI directly into your project. That is it.
+
+Comes with 43 grooves across 12 categories: thall, djent, death metal, slam, black metal, grindcore, metalcore, doom and sludge, progressive metal, rock, thrash, and breakdowns. Four MIDI map presets are included (Odeholm, RS Monarch, Ultimate Heavy Drums, Sleep Token II by MixWave) with a built-in map editor so you can adjust note assignments without leaving the script.
+
+Other things it does: power hand control (hi-hat, ride, crash, china, stack), configurable time signatures (4/4, 3/4, 7/8, 5/4), loop lengths from 1 to 8 bars, velocity humanization, push/pull timing, and auto tom fills with a crash at the turnaround.
 
 ## Requirements
 
-- [REAPER](https://www.reaper.fm/) 6.0 or later
-- [ReaImGui](https://forum.cockos.com/showthread.php?t=250419) extension 0.8 or later (install via ReaPack)
+REAPER 6.0 or later. ReaImGui 0.8 or later. Install ReaImGui through ReaPack if you do not have it.
 
 ## Installation
 
-### Manual
-
-1. Download `wretcher-midi-generator.lua` from this repository.
-2. Place it in your REAPER scripts folder:
-   - **Windows:** `%APPDATA%\REAPER\Scripts\`
-   - **macOS / Linux:** `~/Library/Application Support/REAPER/Scripts/`
-3. In REAPER: **Actions → Show action list → Load** and select the file.
-4. Optionally assign it a toolbar button or keyboard shortcut.
-
 ### Via ReaPack
 
-> ReaPack support coming soon. Once the index is registered, install via **Extensions → ReaPack → Browse packages**.
+Add this repository URL in REAPER: Extensions > ReaPack > Import repositories.
+
+```
+https://raw.githubusercontent.com/wretcher207/dead-pixel-design/main/index.xml
+```
+
+Then go to Extensions > ReaPack > Browse packages, search for Dead Pixel Drum Apparatus, and install.
+
+### Manual
+
+Download `wretcher-midi-generator.lua` from this repository. Drop it in your REAPER scripts folder. On Windows that is `%APPDATA%\REAPER\Scripts\`. On macOS and Linux it is `~/Library/Application Support/REAPER/Scripts/`. Then load it in REAPER through Actions > Show action list > Load.
 
 ## Usage
 
-1. Select a track in REAPER (must be a MIDI or instrument track).
-2. Position the edit cursor where you want the pattern to start.
-3. Run **Wretcher Drum Engine** from the Actions list.
-4. In the UI window:
-   - Choose a **Time Signature** and **Pattern Length**.
-   - Pick a **Groove** from the dropdown (organized by genre).
-   - Select a **Power Hand** kit piece and **Subdivision**.
-   - Adjust **Humanize** (timing slop) and **Push / Pull**.
-   - Toggle **Auto-Insert Tom Fill** for automatic fills at loop end.
-5. Click **GENERATE GROOVE** to write MIDI to the track, or **RANDOMIZE** to pick a random groove first.
+Select a MIDI or instrument track. Put the edit cursor where you want the pattern. Run Dead Pixel Drum Apparatus from the Actions list. Pick a groove, set your parameters, hit GENERATE GROOVE. The MIDI lands on the track. There is also a RANDOMIZE button if you want the script to pick for you.
 
-The Map Editor (collapsible header at the top) lets you view and edit individual MIDI note numbers per instrument for the active preset.
+The Map Editor at the top of the window lets you view and change MIDI note numbers for each instrument in the active preset. Useful when your drum VST does not match the defaults.
+
+## Author
+
+David W. Russell III / [Dead Pixel Design](https://www.deadpixeldesign.com)
 
 ## License
 
-MIT — see [LICENSE](LICENSE).
+MIT. See [LICENSE](LICENSE).
