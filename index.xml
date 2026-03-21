@@ -12,6 +12,9 @@ Requirements: REAPER 6.0+, ReaImGui 0.8+]]></description>
       </metadata>
       <version name="1.0.0" author="Wretcher" time="2026-03-20T00:00:00Z">
         <changelog><![CDATA[Initial release.]]></changelog>
+      </version>
+      <version name="1.0.1" author="Wretcher" time="2026-03-20T00:00:00Z">
+        <changelog><![CDATA[Fix crash on close when ReaImGui_DestroyContext is unavailable in older ReaImGui versions.]]></changelog>
         <source>https://raw.githubusercontent.com/wretcher207/wretcher-midi-generator/main/wretcher-midi-generator.lua</source>
       </version>
     </reapack>

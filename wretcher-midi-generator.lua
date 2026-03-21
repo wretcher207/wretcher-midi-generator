@@ -5,7 +5,9 @@ if not reaper.ImGui_CreateContext then
     return
 end
 local ctx = reaper.ImGui_CreateContext('Wretcher Drum Engine v51')
-reaper.atexit(function() reaper.ImGui_DestroyContext(ctx) end)
+reaper.atexit(function()
+    if reaper.ImGui_DestroyContext then reaper.ImGui_DestroyContext(ctx) end
+end)
 local ImGui_SeparatorText = reaper.ImGui_SeparatorText or function(c, label)
     reaper.ImGui_Separator(c)
     reaper.ImGui_Text(c, label)
