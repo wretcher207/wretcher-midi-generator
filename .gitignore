@@ -1,0 +1,9 @@
+# Backups and temporaries
+*.bak
+*.tmp
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
