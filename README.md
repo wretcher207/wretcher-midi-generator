@@ -13,6 +13,8 @@ A REAPER script that generates drum MIDI for heavy music. You pick a groove, set
 
 Comes with 43 grooves across 12 categories: thall, djent, death metal, slam, black metal, grindcore, metalcore, doom and sludge, progressive metal, rock, thrash, and breakdowns. Four MIDI map presets are included (Odeholm, RS Monarch, Ultimate Heavy Drums, Sleep Token II by MixWave) with a built-in map editor so you can adjust note assignments without leaving the script.
 
+You can also capture your own grooves directly from the timeline. Select a drum track, highlight a time selection, and the script reads every kit piece: kicks, snares, hi-hats, rides, toms, crashes, chinas, splashes, stacks, and bells. Save the captured groove to any category and it plays back exactly as recorded.
+
 Other things it does: power hand control (hi-hat, ride, crash, china, stack), configurable time signatures (4/4, 3/4, 7/8, 5/4), loop lengths from 1 to 8 bars, velocity humanization, push/pull timing, and auto tom fills with a crash at the turnaround.
 
 ## Requirements
